@@ -2,6 +2,7 @@
 %define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"])')
 %define	ruby_version	%(ruby -r rbconfig -e 'print Config::CONFIG["ruby_version"]')
 Summary:	Struts-like web development framework
+Summary(pl):	Szkielet do tworzenia WWW podobny do Struts
 Name:		ruby-Nitro
 %define tarname nitro
 Version:	0.16.0
@@ -18,8 +19,12 @@ Requires: ruby-Glue
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Nitro is a java Struts-like web development framework, with renderers, XHTML 
-server pages, and more.
+Nitro is a Java Struts-like web development framework, with renderers,
+XHTML server pages, and more.
+
+%description -l pl
+Nitro to szkielet do tworzenia WWW podobny do Java Struts, z
+narzêdziami do renderowania, stronami serwerowymi XHTML itd.
 
 %prep
 %setup -q -n %{tarname}-%{version}
