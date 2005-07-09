@@ -11,10 +11,10 @@ License:	Ruby-alike
 Group:		Development/Languages
 Source0:	http://rubyforge.org/download.php/4917/%{tarname}-%{version}.tgz
 # Source0-md5:	cf5ab2f5da295a2578fd4b0e7cce466f
-uRL:		http://rubyforge.org/projects/nitro/
+URL:		http://rubyforge.org/projects/nitro/
 BuildRequires:	ruby
 Requires:	ruby
-Requires: ruby-Glue
+Requires:	ruby-Glue
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
