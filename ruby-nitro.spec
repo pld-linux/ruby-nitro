@@ -5,12 +5,12 @@ Summary:	Struts-like web development framework
 Summary(pl):	Szkielet do tworzenia WWW podobny do Struts
 Name:		ruby-Nitro
 %define tarname nitro
-Version:	0.23.0
+Version:	0.24.0
 Release:	1
 License:	Ruby-alike
 Group:		Development/Languages
-Source0:	http://rubyforge.org/download.php/5826/%{tarname}-%{version}.tgz
-# Source0-md5:	c0dd87b61dfde36bf5fd17ee7c83e98c
+Source0:	http://rubyforge.org/download.php/6759/%{tarname}-%{version}.tgz
+# Source0-md5:	d60b175f2bbbc2741f1e7903fc1211d7
 URL:		http://rubyforge.org/projects/nitro/
 BuildRequires:	ruby
 Requires:	ruby
@@ -35,10 +35,9 @@ rdoc --op rdoc lib
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_rubylibdir}
 cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
-cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +48,3 @@ rm -rf $RPM_BUILD_ROOT
 %{ruby_rubylibdir}/*
 %{ruby_ridir}/N*
 %{ruby_ridir}/*Shader*
-%{_examplesdir}/%{name}-%{version}
