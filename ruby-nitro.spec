@@ -5,12 +5,12 @@ Summary:	Struts-like web development framework
 Summary(pl):	Szkielet do tworzenia WWW podobny do Struts
 Name:		ruby-Nitro
 %define tarname nitro
-Version:	0.24.0
+Version:	0.25.0
 Release:	1
 License:	Ruby-alike
 Group:		Development/Languages
-Source0:	http://rubyforge.org/download.php/6759/%{tarname}-%{version}.tgz
-# Source0-md5:	d60b175f2bbbc2741f1e7903fc1211d7
+Source0:	http://rubyforge.org/download.php/7158/%{tarname}-%{version}.tgz
+# Source0-md5:	604a9676b17edd41f0167637048554e1
 URL:		http://rubyforge.org/projects/nitro/
 BuildRequires:	ruby
 Requires:	ruby
@@ -27,7 +27,8 @@ Nitro to szkielet do tworzenia WWW podobny do Java Struts, z
 narzêdziami do renderowania, stronami serwerowymi XHTML itd.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+#%setup -q -n %{tarname}-%{version}
+%setup -q -n %{tarname}
 
 %build
 rdoc --ri --op ri lib
