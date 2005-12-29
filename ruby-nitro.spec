@@ -10,9 +10,9 @@ Source0:	http://rubyforge.org/download.php/7158/%{tarname}-%{version}.tgz
 # Source0-md5:	604a9676b17edd41f0167637048554e1
 Patch0:		%{name}-FHS.patch
 URL:		http://rubyforge.org/projects/nitro/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 Requires:	ruby-Glue
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
