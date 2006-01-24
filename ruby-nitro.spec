@@ -8,7 +8,6 @@ License:	Ruby-alike
 Group:		Development/Languages
 Source0:	http://rubyforge.org/download.php/8081/%{tarname}-%{version}.tgz
 # Source0-md5:	2a69ca49a776d066c377136e380312f2
-#Patch0:		%{name}-FHS.patch
 URL:		http://rubyforge.org/projects/nitro/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
@@ -27,7 +26,6 @@ narzêdziami do renderowania, stronami serwerowymi XHTML itd.
 
 %prep
 %setup -q -n %{tarname}-%{version}
-#%patch0 -p1
 
 %build
 rdoc --ri --op ri lib
