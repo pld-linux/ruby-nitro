@@ -8,6 +8,8 @@ License:	Ruby-alike
 Group:		Development/Languages
 Source0:	http://rubyforge.org/download.php/8081/%{tarname}-%{version}.tgz
 # Source0-md5:	2a69ca49a776d066c377136e380312f2
+Source1:	http://rubyforge.org/download.php/8092/examples-%{version}.tgz
+# Source1-md5:	9593a995f5e53e19b2f0d7c8fe91e8c2
 URL:		http://rubyforge.org/projects/nitro/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
@@ -24,8 +26,15 @@ XHTML server pages, and more.
 Nitro to szkielet do tworzenia WWW podobny do Java Struts, z
 narzêdziami do renderowania, stronami serwerowymi XHTML itd.
 
+%package examples
+Summary:	examples of Nitro's use
+Group:		Development/Languages
+
+%description examples
+examples of Nitro's use
+
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -q -n %{tarname}-%{version} -a1
 
 %build
 rdoc --ri --op ri lib
@@ -33,11 +42,12 @@ rdoc --op rdoc lib
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_datadir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_datadir}/%{name},%{_examplesdir}/%{name}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_rubylibdir}
 cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a src/part $RPM_BUILD_ROOT%{ruby_rubylibdir}
 cp -a proto $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -a examples-%{version}/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,3 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc rdoc README CHANGELOG doc/*
 %{ruby_rubylibdir}/*
 %{_datadir}/%{name}
+
+%files examples
+%{_examplesdir}/*
