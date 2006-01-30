@@ -27,11 +27,15 @@ Nitro to szkielet do tworzenia WWW podobny do Java Struts, z
 narzêdziami do renderowania, stronami serwerowymi XHTML itd.
 
 %package examples
-Summary:	examples of Nitro's use
+Summary:	Examples of Nitro's use
+Summary(pl):	Przyklady wykorzystania Nitro
 Group:		Development/Languages
 
 %description examples
-examples of Nitro's use
+Examples of Nitro's use.
+
+%description examples -l pl
+Przyklady wykorzystania Nitro.
 
 %prep
 %setup -q -n %{tarname}-%{version} -a1
