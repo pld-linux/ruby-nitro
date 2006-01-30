@@ -42,12 +42,12 @@ rdoc --op rdoc lib
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_datadir}/%{name},%{_examplesdir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{_datadir}/%{name},%{_examplesdir}/%{name}-%{version}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_rubylibdir}
 cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 cp -a src/part $RPM_BUILD_ROOT%{ruby_rubylibdir}
 cp -a proto $RPM_BUILD_ROOT%{_datadir}/%{name}
-cp -a examples-%{version}/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+cp -a examples-%{version}/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,4 +59,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 
 %files examples
+%defattr(644,root,root,755)
 %{_examplesdir}/*
