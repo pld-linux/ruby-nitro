@@ -1,5 +1,5 @@
 Summary:	Struts-like web development framework
-Summary(pl):	Szkielet do tworzenia WWW podobny do Struts
+Summary(pl.UTF-8):   Szkielet do tworzenia WWW podobny do Struts
 Name:		ruby-Nitro
 %define tarname nitro
 Version:	0.27.0
@@ -22,19 +22,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Nitro is a Java Struts-like web development framework, with renderers,
 XHTML server pages, and more.
 
-%description -l pl
+%description -l pl.UTF-8
 Nitro to szkielet do tworzenia WWW podobny do Java Struts, z
-narzêdziami do renderowania, stronami serwerowymi XHTML itd.
+narzÄ™dziami do renderowania, stronami serwerowymi XHTML itd.
 
 %package examples
 Summary:	Examples of Nitro's use
-Summary(pl):	Przyklady wykorzystania Nitro
+Summary(pl.UTF-8):   Przyklady wykorzystania Nitro
 Group:		Development/Languages
 
 %description examples
 Examples of Nitro's use.
 
-%description examples -l pl
+%description examples -l pl.UTF-8
 Przyklady wykorzystania Nitro.
 
 %prep
