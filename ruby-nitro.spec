@@ -1,5 +1,5 @@
 Summary:	Struts-like web development framework
-Summary(pl.UTF-8):   Szkielet do tworzenia WWW podobny do Struts
+Summary(pl.UTF-8):	Szkielet do tworzenia WWW podobny do Struts
 Name:		ruby-Nitro
 %define tarname nitro
 Version:	0.27.0
@@ -28,7 +28,7 @@ narzędziami do renderowania, stronami serwerowymi XHTML itd.
 
 %package examples
 Summary:	Examples of Nitro's use
-Summary(pl.UTF-8):   Przyklady wykorzystania Nitro
+Summary(pl.UTF-8):	Przyklady wykorzystania Nitro
 Group:		Development/Languages
 
 %description examples
