@@ -16,6 +16,7 @@ BuildRequires:	ruby-modules
 %{?ruby_mod_ver_requires_eq}
 Requires:	ruby-glue
 Obsoletes:	ruby-Nitro
+Provides:	ruby-Nitro
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
